@@ -25,27 +25,27 @@ const wallets = [
 const questions = [
   {
     id: 1,
-    question: "Do you support the new company policy?",
+    question: "Do you support the proposed BeltLine expansion?",
     answers: ["Yes", "No"],
   },
   {
     id: 2,
-    question: "Are you satisfied with the current work environment?",
+    question: "Are you satisfied with the city's response to the recent increase in crime?",
     answers: ["Yes", "No"],
   },
   {
     id: 3,
-    question: "Would you recommend our services to others?",
+    question: "Do you support the mayor's plan to invest in affordable housing?",
     answers: ["Yes", "No"],
   },
   {
     id: 4,
-    question: "Do you feel valued at work?",
+    question: "Do you support the city's new transportation plan?",
     answers: ["Yes", "No"],
   },
   {
     id: 5,
-    question: "Is the management responsive to your concerns?",
+    question: "Can you afford your rent with your current salary?",
     answers: ["Yes", "No"],
   },
 ];
@@ -79,10 +79,10 @@ const Content = () => {
       <div className="flex justify-between px-32 border mx-32 h-[90%] items-center">
         <div className="">
           <img className="mx-auto" src={Logo} alt="logo" width={80} />
-          <p className="text-white">Vote using Thirdweb integrated tool</p>
+          <p className="text-white">Atlanta's #1 Blockchain Voting Platform</p>
           {connectedWallets.length > 0 ? (
             <>
-              <div className="text-white mt-4">
+              <div className="mt-4 text-white">
                 <p>{currentQuestion.question}</p>
                 {currentQuestion.answers.map((answer) => (
                   <label key={answer} className="block m-2">
@@ -114,7 +114,7 @@ const Content = () => {
                   className="cursor-pointer"
                 />
               </div>
-              <div className="text-white mt-8">
+              <div className="mt-8 text-white">
                 <p>Your Total Vote is:</p>
                 <p>
                   Yes(
@@ -128,14 +128,14 @@ const Content = () => {
               </div>
             </>
           ) : (
-            <div className="text-white mt-4">
+            <div className="mt-4 text-white">
               <p>Please connect your wallet to view and answer questions.</p>
             </div>
           )}
         </div>
         <div className="border rounded-lg border-slate-600 w-[50%] h-[70%] bg-[#222831] leading-10 py-6">
-          <p className="text-white text-4xl text-center">Connect your wallet</p>
-          <p className="text-white text-center">Vote for proposals</p>
+          <p className="text-4xl text-center text-white">Connect your wallet</p>
+          <p className="text-center text-white">Vote for proposals</p>
           <div className="flex justify-center my-8">
             <ConnectButton
               client={client}
