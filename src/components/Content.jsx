@@ -7,7 +7,7 @@ import BackButton from "../assets/images/GoBack.png";
 import { createWallet, walletConnect, inAppWallet } from "thirdweb/wallets";
 
 const client = createThirdwebClient({
-  clientId: "ac5301b4a9f0d66408525061d8dd3145",
+  clientId: "06bcfb42f1eeb14f3bdb12f16703ebb8",
 });
 
 const wallets = [
